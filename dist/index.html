@@ -1,0 +1,22 @@
+<!doctype html><html lang="zh"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,inital-scale=1,maximum-scale=1,user-scalable=no;"><meta name="apple-mobile-web-app-title" content="ycy素材站"><meta name="theme-color" content="#ffffff"><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="manifest" href="./manifest.json"/><link rel="icon" href="./icon.png" type="image/png"/><link rel="apple-touch-icon" href="./icon.png"><link rel="apple-touch-startup-image" href="./icon.png"><link rel="stylesheet" href="https://res.wx.qq.com/t/wx_fed/weui-source/res/2.5.0/weui.min.css"><script src="https://res.wx.qq.com/t/wx_fed/cdn_libs/res/weui/1.2.8/weui.min.js"></script><title>ycy素材站</title></head><body style="background: white"><div id="root"></div><style>::-webkit-scrollbar {width: 8px;}::-webkit-scrollbar-thumb {border-radius: 2px;background-color: #cccedb;}::-webkit-scrollbar-track{display: none;}</style><script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?302b5111d0decd23ff088e5470b8599e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js', {
+          scope: '/'
+        }).then(function (registration) {
+          navigator.serviceWorker.addEventListener('message', event => {
+            const msg = event.data.msg;
+            if (msg === 'OFFLINE') {
+              weui.topTips('未检测到网络连接', {
+                duration: 3000,
+              });
+            }
+          });
+        }).catch(function (err) {
+        });
+      }</script><script src="./manifest.3202dbe97d0673b01b06.js"></script><script src="./vendor.46cf05badc95a1b9dbe4.js"></script><script src="./index.3845dc26b41b329cb890.js"></script></body></html>
